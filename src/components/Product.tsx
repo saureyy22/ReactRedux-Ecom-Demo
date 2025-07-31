@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { addToCart, type Product as ProductType } from '../store/cartSlice'
+import addIcon from '../assets/add-icon.svg'
 
 interface ProductProps {
   product: ProductType
@@ -20,16 +21,20 @@ const Product: React.FC<ProductProps> = ({ product }) => {
   }
 
   return (
-    <div className="product">
+    <div className="product fade-in">
       <h3>{product.name}</h3>
-      <p>${product.price.toFixed(2)}</p>
-      <button onClick={handleAddToCart}>Add to Cart</button>
-      <input 
-        ref={inputRef}
-        type="text" 
-        placeholder="Quantity or notes..."
-        style={{ marginLeft: '10px', padding: '4px' }}
-      />
+      <div className="product-price">${product.price.toFixed(2)}</div>
+      <div className="product-actions">
+        <button className="btn-primary" onClick={handleAddToCart}>
+          <img src={addIcon} alt="Add" width="16" height="16" />
+          Add to Cart
+        </button>
+        <input 
+          ref={inputRef}
+          type="text" 
+          placeholder="Notes..."
+        />
+      </div>
     </div>
   )
 }

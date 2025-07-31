@@ -4,42 +4,42 @@ import type { Product } from '../store/cartSlice'
 export const products: Product[] = [
   {
     id: 1,
-    name: "Laptop",
+    name: "MacBook Pro 16\"",
     price: 999.99
   },
   {
     id: 2,
-    name: "Smartphone",
+    name: "iPhone 15 Pro",
     price: 699.99
   },
   {
     id: 3,
-    name: "Headphones",
+    name: "AirPods Pro",
     price: 199.99
   },
   {
     id: 4,
-    name: "Tablet",
+    name: "iPad Air",
     price: 399.99
   },
   {
     id: 5,
-    name: "Smart Watch",
+    name: "Apple Watch Ultra",
     price: 299.99
   },
   {
     id: 6,
-    name: "Keyboard",
+    name: "Magic Keyboard",
     price: 79.99
   },
   {
     id: 7,
-    name: "Mouse",
+    name: "Magic Mouse",
     price: 49.99
   },
   {
     id: 8,
-    name: "Monitor",
+    name: "Studio Display",
     price: 249.99
   }
 ]
